@@ -1,5 +1,15 @@
 # [2022.02] SSAFY_STEPY_STUDY
 
+## INDEX
+- [1. 스터디 목표](#1-------)
+- [2. 활동 방식](#2------)
+- [3. 활동 내역](#3------)
+  * [[22.02.04]](#-220204-)
+  * [[22.02.08]](#-220208-)
+- [4. 기타 확인사항](#4--------)
+  * [GitLab 업로드 방법](#gitlab-------)
+
+
 ## 1. 스터디 목표
 
 - 알고리즘 문제 풀이를 통한 실력 향상!
@@ -32,7 +42,7 @@
 
 ![Untitled](README/Untitled.png)
 
-1. GUI tool 사용(GitKreken)
+2. GUI tool 사용(GitKreken)
     - new tab 클릭
     
     ![Untitled](README/Untitled%201.png)
