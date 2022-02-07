@@ -30,7 +30,7 @@ public class Main_11729 {
 		hanoi(n-1,start,mid,end);
 		//n원판이동
 		hanoi(1,start,end,mid);
-		//n-1ㅇㅣ동
+		//n-1 이동
 		hanoi(n-1,mid,end,start);
 	}
 }
