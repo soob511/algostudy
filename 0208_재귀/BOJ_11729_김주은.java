@@ -20,7 +20,7 @@ public class boj_11729_하노이탑이동순서 {
 		System.out.println(cnt + "\n" + sb.toString());
 	}
 	
-
+	// from에서 to로 5개의 원판을 옮김
 	public static void hanoi(int N, int from, int step, int to) {
 		
 		if(N==0) return;
