@@ -13,10 +13,7 @@ public class Main_10773_제로 {
 
 		for(int i=0;i<n;i++) {
 			int num= sc.nextInt();
-//			if(stack.empty()) {
-//				stack.push(num);// 스택이 비어있을때 넣어줌 
-//				
-//			}
+
 			if(num==0) {
 				stack.pop();// 0 입력하면 최근 숫자 삭제				
 			}
