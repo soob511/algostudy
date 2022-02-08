@@ -13,7 +13,14 @@ public class N10870_피보나치수5 {
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();	
 		
-		Recursive(0, 1);
+		if(n<2) {
+			sum = n;
+		}
+		else {
+			Recursive(0, 1);
+		}
+		
+		//Recursive(0, 1);
 		
 		System.out.println(sum);
 
@@ -21,6 +28,11 @@ public class N10870_피보나치수5 {
 	
 	
 	public static void Recursive(int num1, int num2) {
+//		if(n<2) {
+//			sum = n;
+//			return;
+//		}
+		
 		if(cnt==n) return;
 		
 		sum = num1 + num2;
@@ -28,5 +40,4 @@ public class N10870_피보나치수5 {
 		
 		Recursive(num2, sum);
 	}
-
 }
