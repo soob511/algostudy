@@ -4,29 +4,44 @@ import java.io.*;
 import java.util.*;
 
 public class BOJ_2447_이길상 {
-	static StringBuilder sb = new StringBuilder();
-	static int count = 0;
+	static boolean[][] asterisk;
+	static int N;
 	
-	// a 위치에서 c위치로 원판 k개 옮기기. b는 무시
-	static void hanoi(int a, int b, int c, int k) {
-		// 1개만 옮기는 경우
-		if(k==1) {
-			sb.append(a + " " + c + "\n");
-			count++;
-			return;
+	//k 크기의 구멍 만들기
+	static void hole(int k) {
+		if (k==0) return;
+		
+		// 3*k 크기를 한 블록으로 생각하며 순회
+		for (int i = 0; i < N; i+=(k*3)) {
+			for (int j = 0; j < N; j+=(k*3)) {
+				// 블록 내부에 구멍을 만들 범위 정하기
+				int minX = i + k, minY = j + k;
+				int maxX = minX + k, maxY = minY + k;
+				
+				// 구멍 만드는 중
+				for (int x = minX; x < maxX; x++) 
+					for (int y = minY; y < maxY; y++) 
+						asterisk[x][y] = true;
+			}
 		}
 		
-		// 여러개 옮기는 경우
-		hanoi(a, c, b, k-1);
-		hanoi(a, b, c, 1);
-		hanoi(b, a, c, k-1);
+		hole(k/3);
 	}
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		N = sc.nextInt();
 		
-		hanoi(1, 2, 3, sc.nextInt());
-		System.out.println(count);
+		asterisk = new boolean[N][N];
+		hole(N/3);
+		
+		// 출력이 매우 많기 때문에 StringBuilder 사용
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++)
+				sb.append(asterisk[i][j]? ' ':'*');
+			sb.append('\n');
+		}
 		System.out.println(sb.toString());
 		
 		sc.close();
