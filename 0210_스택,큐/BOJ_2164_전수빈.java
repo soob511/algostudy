@@ -18,11 +18,8 @@ public class Main_2164_카드2 {
 		
 		
 		while(queue.size()>1) {
-			queue.poll();
-		
-			int back = queue.poll();
-			
-			queue.offer(back);
+			queue.poll();  //처음꺼 빼기
+			queue.offer(queue.poll()); //두번째꺼 빼서 뒤로 넣어주기
 			
 		}
 		System.out.println(queue.poll());
