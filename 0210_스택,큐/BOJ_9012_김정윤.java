@@ -21,20 +21,25 @@ public class BOJ_9012_김정윤 {
 			
 			Stack<Character> PS = new Stack<Character>();
 			String ps = br.readLine();
-			StringTokenizer st = new StringTokenizer(ps);
+			char[] st  = ps.toCharArray();
 			
 			for(int i=0; i<ps.length(); i++) {
-				String ps2 = st.nextToken();
-				if(ps2=="(") {				// "(" 인 경우
+				char ps2 = st[i];
+				if(ps2=='(') {				// "(" 인 경우
 					PS.push('(');			// stack에 저장
-				}else {						// ")" 인 경우
-					if(PS.isEmpty()) {
+				}
+				else if(ps2 == ')'){						// ")" 인 경우
+					if(PS.size() == 0) {
+						PS.push(')');
 						break;
-					}else {
+					}
+					else if(PS.peek() == '(')
 						PS.pop();				// stack에서 얖의 '(' 제거
+					else { // 스택 맨 위가 여는 괄호가 아닐때
+						break;
 					}
 				}
-			}
+			}	
 			
 			// VPS인지 결과 출력
 			if(PS.isEmpty()) {
