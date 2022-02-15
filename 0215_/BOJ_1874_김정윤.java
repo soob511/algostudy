@@ -22,6 +22,7 @@ public class BOJ_1874_김정윤 {
 		Stack<Integer> stack = new Stack<>();
 		StringBuilder sb = new StringBuilder();
 		int arrayCnt = 0;
+		
 		for(int i=0; i<n; i++) {
 			stack.add(i+1);
 			sb.append("+" + "\n");
@@ -29,12 +30,12 @@ public class BOJ_1874_김정윤 {
 				stack.pop();
 				sb.append("-" + "\n");
 				arrayCnt++;
-				if(Array[arrayCnt]==stack.peek()) {
+				if(arrayCnt<n && !stack.isEmpty() && Array[arrayCnt]==stack.peek()) {
 					do {	// stack에서 제거한 바로 앞 숫자와 다음 순열 숫자 비교
 						stack.pop();
 						sb.append("-" + "\n");
 						arrayCnt++;
-					}while(Array[arrayCnt]==stack.peek());
+					}while(arrayCnt<n && !stack.isEmpty() &&  Array[arrayCnt]==stack.peek());
 				}
 			}
 		}
@@ -47,7 +48,7 @@ public class BOJ_1874_김정윤 {
 					stack.pop();
 					sb.append("-" + "\n");
 					arrayCnt++;
-				}while(Array[arrayCnt]==stack.peek());
+				}while(!stack.isEmpty() && Array[arrayCnt]==stack.peek());
 			}else {	// 불가능한 순열
 				flag = false;
 			}
