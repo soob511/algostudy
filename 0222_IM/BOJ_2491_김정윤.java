@@ -19,7 +19,7 @@ public class BOJ_2491_김정윤 {
 		}
 		
 		int cntIn = 1, cntDe = 1;
-		int maxLength = 0;
+		int maxLength = 1;
 		for(int i=0; i<N-1; i++) {	// 수열을 순서대로 읽으면서
 			// 연속해서 커지는 경우 (같은 것 포함)
 			if(Array[i]<=Array[i+1]) cntIn++;
