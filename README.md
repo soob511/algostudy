@@ -34,6 +34,7 @@
   * [[22.02.15]](#anchor-220215)
   * [[22.02.17]](#anchor-220217)
   * [[22.02.22]](#anchor-220222)
+  * [[22.02.24]](#anchor-220224)
 - [4. 기타 확인사항](#4-기타-확인사항)
   * [GitLab 업로드 방법](#gitlab-업로드-방법)
 
@@ -96,6 +97,13 @@
   - [5. 경비원](https://www.acmicpc.net/problem/2564)
   - [6. 수열](https://www.acmicpc.net/problem/2491)
   - [7. 참외밭](https://www.acmicpc.net/problem/2477)
+
+### [22.02.24]
+
+- IM 대비:
+  - [8. 직사각형](https://www.acmicpc.net/problem/2527)
+  - [9. 자리배정](https://www.acmicpc.net/problem/10157)
+
 
 ## 4. 기타 확인사항
 
