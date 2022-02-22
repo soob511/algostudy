@@ -3,7 +3,7 @@ package com.ssafy.add.d0222;
 import java.util.*;
 import java.io.*;
 
-public class Main_BJ_2564_경비원_김주은2 {
+public class Main_BJ_2564_경비원_김주은 {
 
 	static int[][] map;
 	static int W, H;
@@ -15,7 +15,6 @@ public class Main_BJ_2564_경비원_김주은2 {
 
 		W = Integer.parseInt(st.nextToken());
 		H = Integer.parseInt(st.nextToken());
-		map = new int[H + 1][W + 1]; // 1~W, 1~H까지 사용
 
 		int M = Integer.parseInt(br.readLine());
 
@@ -29,14 +28,13 @@ public class Main_BJ_2564_경비원_김주은2 {
 		}
 
 		int distance = 0;
-		for (int i = 1; i <= M; i++) {
+		for (int i = 0; i < M; i++) {
 			//dir값이 작은 쪽이 왼쪽 매개변수, 큰 쪽이 오른쪽 매개변수에 들어가도록 실행
-			if(place[0][0]<=place[i][0])
-				distance += minDistance(place[0], place[i]);
+			if(place[M][0]<=place[i][0])
+				distance += minDistance(place[M], place[i]);
 			else {
-				distance += minDistance(place[i], place[0]);
+				distance += minDistance(place[i], place[M]);
 			}
-			System.out.println(distance);
 		}
 
 		System.out.println(distance);
