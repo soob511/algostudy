@@ -29,7 +29,7 @@ public class BOJ_2527_정승우 {
 			if(q<y1||x>p1||y>q1||q<y1) {
 				System.out.println('d');
 			//선분이 겹침
-			}else if((x==p1&&q==x1)||(p==x1&&q==y1)||(p1==x&&q1==y)||(p==x1&&y==q)) {
+			}else if((p1==x&&q1>y&&q>y1)||(p==x1&&q>y1&&q1>y)||(q==y1&&p1>x&&p>x1)||(q1==y&&p>x1&&p1>x)) {
 				System.out.println('b');
 			//점이 겹침
 			}else if((x==p1||x1==p)||(y==q1)||(q==y1)) {
@@ -39,5 +39,5 @@ public class BOJ_2527_정승우 {
 				System.out.println('a');
 			}				
 		}
-	}
+	}                                             
 }
