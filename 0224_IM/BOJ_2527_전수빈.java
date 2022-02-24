@@ -27,7 +27,7 @@ public class Main_2527_직사각형 {
 			else if((x==p2&&y==q2)||(x==p2&&q==y2)||(p==x2&&q==y2)||(p==x2&&y==q2)) { //점 
 				System.out.println("c");
 			}
-			else if((y==q2&&x2<p&&p2>x)||(x==p2&&q2<y&&y2<q)
+			else if((y==q2&&x2<p&&p2>x)||(x==p2&&q2>y&&y2<q)
 					||(q==y2&&x2<p&&p2>x)||(x2==p&&q2>y&&y2<q)) {//선분
 				System.out.println("b");
 			}
