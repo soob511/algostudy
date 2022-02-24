@@ -13,46 +13,30 @@ public class IM_09_10157_자리배정 {
 		int mode = 0;
 		
 		while(true) {
-			int I;
 			if(mode%2 == 0) {
-				I = R;
+				K-=R;
 				C--;
+				y+=(R*dy[mode]);
 			}
 			else {
-				I = C;
+				K-=C;
 				R--;
+				x+=(C*dx[mode]);
 			}
 			
-			if(I == 0) {
+			if(R<0 || C<0) {
 				System.out.println(0);
 				return;
 			}
 			
-			for (int i = 0; i < I; i++) {
-				x+= dx[mode];
-				y+= dy[mode];
-				if(--K == 0) {
-					System.out.println(x + " " + y);
-					return;
-				}
+			if(K<=0) {
+				x+=(K*dx[mode]);
+				y+=(K*dy[mode]);
+				System.out.println(x + " " + y);
+				return;
 			}
 			mode = (mode+1)%4;
 		}
-		
-		
-//		while(true) {
-//			for (int r = 0; r < R; r++) y++;
-//			C--;
-//			
-//			for (int c = 0; c < C; c++) x++;
-//			R--;
-//			
-//			for (int r = 0; r < R; r++) y--;
-//			C--;
-//			
-//			for (int c = 0; c < C; c++) x--;
-//			R--;
-//		}
 	}
 
 }
