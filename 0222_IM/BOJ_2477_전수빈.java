@@ -43,8 +43,8 @@ public class Main_2477_참외밭 {
 		
 		//작은 면적 구하기
 		int small =0;
-		int swidth =map[(widx+2)%6][1];//가로긴변+2 작은면적 가로변
-		int slength =map[(lidx+4)%6][1];//세로긴변 +4 작은면적 세로변
+		int swidth =map[(widx+3)%6][1];//작은면적 세로변
+		int slength =map[(lidx+3)%6][1];//작은면적 가로변
 		small = swidth*slength;
 		
 		System.out.println((big-small)*k);
