@@ -35,6 +35,7 @@
   * [[22.02.17]](#anchor-220217)
   * [[22.02.22]](#anchor-220222)
   * [[22.02.24]](#anchor-220224)
+  * [[22.03.03]](#anchor-220303)
 - [4. 기타 확인사항](#4-기타-확인사항)
   * [GitLab 업로드 방법](#gitlab-업로드-방법)
 
@@ -103,6 +104,12 @@
 - IM 대비:
   - [8. 직사각형](https://www.acmicpc.net/problem/2527)
   - [9. 자리배정](https://www.acmicpc.net/problem/10157)
+
+### [22.03.03]
+
+- DFS와 BFS
+  - [토마토](https://www.acmicpc.net/problem/7569)
+  - [나이트의 이동](https://www.acmicpc.net/problem/7562)
 
 
 ## 4. 기타 확인사항
