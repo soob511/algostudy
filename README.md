@@ -105,11 +105,22 @@
   - [8. 직사각형](https://www.acmicpc.net/problem/2527)
   - [9. 자리배정](https://www.acmicpc.net/problem/10157)
 
+
+
 ### [22.03.03]
+
+- IM 대비:
+  - [15. 주사위쌓기](https://www.acmicpc.net/problem/2116)
+  - [16. 창고다각형](https://www.acmicpc.net/problem/2304)
+
+
+
+### [22.03.07]
 
 - DFS와 BFS
   - [토마토](https://www.acmicpc.net/problem/7569)
   - [나이트의 이동](https://www.acmicpc.net/problem/7562)
+
 
 
 ## 4. 기타 확인사항
