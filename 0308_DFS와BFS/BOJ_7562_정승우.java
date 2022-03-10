@@ -27,14 +27,14 @@ public class BOJ_7562_정승우 {
 		
 		
 	}
-
+	//말의 정보를 담을 q를 생성
 	static Queue<knight> q = new LinkedList<>();
 	
 	//시계방향으로
 	static int dr[] = {-2, -1, 1, 2, 2, 1, -1, -2};  
 	static int dc[] = {1, 2, 2, 1, -1, -2, -2, -1};
 	
-	//
+	//체스판 배열
 	static int arr[][];
 	//I : 체스판 크기
 	static int I,r2,c2;
@@ -70,7 +70,7 @@ public class BOJ_7562_정승우 {
 	}
 	
 	public static void bfs() {
-		//q가 빌때까지
+		//q의 값이 빌때까지
 		while (!q.isEmpty()) {
 			//temp에 q에서 빼낸 값을 저장
 			knight temp = q.poll();
