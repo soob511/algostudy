@@ -58,36 +58,28 @@ public class Main_7569_토마토3차원  {
 
 	private static void bfs() {
 		
-		Queue<Integer> qx = new LinkedList<>();
-		Queue<Integer> qy = new LinkedList<>();
-		Queue<Integer> qz = new LinkedList<>();
+		Queue<int []> q = new LinkedList<int []>();
 		
 		for(int h=0;h<H;h++) {
 			for(int i=0;i<n;i++) {
 				for(int j=0;j<m;j++) {
 					if(map[h][i][j]==1) {
-						qx.add(i);
-						qy.add(j);
-						qz.add(h);
+						q.add(new int[] {h,i,j});
 						
 					}
 				}
 			}
 		}
-		while(!qx.isEmpty()) {
-			int a = qx.poll();
-			int b = qy.poll();
-			int c = qz.poll();
+		while(!q.isEmpty()) {
+			int[] a = q.poll();
 			for(int i=0;i<6;i++) {
-				int nx = a+dx[i];
-				int ny = b+dy[i];
-				int nz = c+dz[i];
+				int nz = a[0]+dz[i];
+				int nx = a[1]+dx[i];
+				int ny = a[2]+dy[i];
 				if(nx>=0&&ny>=0&&nx<n&&ny<m&&nz>=0&&nz<H) {
 					if(map[nz][nx][ny]==0) {
-						qx.add(nx);
-						qy.add(ny);
-						qz.add(nz);
-						map[nz][nx][ny]=map[c][a][b]+1;
+						q.add(new int[] {nz,nx,ny});
+						map[nz][nx][ny]=map[a[0]][a[1]][a[2]]+1;
 					}
 				}
 			}
