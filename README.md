@@ -124,7 +124,7 @@
   - [나이트의 이동](https://www.acmicpc.net/problem/7562)
 
 
-### [22.03.10]
+### [22.03.15]
 
 - 삼성 A형 기출 문제
   - [파이프 옮기기1](https://www.acmicpc.net/problem/17070)
