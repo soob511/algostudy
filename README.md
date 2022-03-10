@@ -36,6 +36,8 @@
   * [[22.02.22]](#anchor-220222)
   * [[22.02.24]](#anchor-220224)
   * [[22.03.03]](#anchor-220303)
+  * [[22.03.10]](#anchor-220310)
+  * [[22.03.15]](#anchor-220315)
 - [4. 기타 확인사항](#4-기타-확인사항)
   * [GitLab 업로드 방법](#gitlab-업로드-방법)
 
@@ -115,12 +117,19 @@
 
 
 
-### [22.03.07]
+### [22.03.10]
 
 - DFS와 BFS
   - [토마토](https://www.acmicpc.net/problem/7569)
   - [나이트의 이동](https://www.acmicpc.net/problem/7562)
 
+
+### [22.03.10]
+
+- 삼성 A형 기출 문제
+  - [파이프 옮기기1](https://www.acmicpc.net/problem/17070)
+  - [⚾](https://www.acmicpc.net/problem/17281)
+  - [+α: 괄호 추가하기](https://www.acmicpc.net/problem/16637)
 
 
 ## 4. 기타 확인사항
