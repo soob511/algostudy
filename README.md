@@ -2,6 +2,10 @@
 
 ## IM 검정 대비 필수 20문제
 
+<details>
+<summary>접기/펼치기 버튼</summary>
+<div>
+
 1. [일곱 난쟁이](https://www.acmicpc.net/problem/2309)
 1. [줄 세우기](https://www.acmicpc.net/problem/2605)
 1. [빙고](https://www.acmicpc.net/problem/2578)
@@ -23,11 +27,19 @@
 1. [방 배정](https://www.acmicpc.net/problem/13300)
 1. [딱지놀이](https://www.acmicpc.net/problem/14696)
 
+</div>
+</details>
+
+
 
 ## INDEX
 - [1. 스터디 목표](#1-스터디-목표)
 - [2. 활동 방식](#2-활동-방식)
 - [3. 활동 내역](#3-활동-내역)
+  <details>
+  <summary>접기/펼치기 버튼</summary>
+  <div>
+
   * [[22.02.04]](#anchor-220204)
   * [[22.02.08]](#anchor-220208)
   * [[22.02.10]](#anchor-220210)
@@ -38,6 +50,10 @@
   * [[22.03.03]](#anchor-220303)
   * [[22.03.10]](#anchor-220310)
   * [[22.03.15]](#anchor-220315)
+  * [[22.03.17]](#anchor-220317)
+
+  </div>
+  </details>
 - [4. 기타 확인사항](#4-기타-확인사항)
   * [GitLab 업로드 방법](#gitlab-업로드-방법)
 
@@ -130,6 +146,14 @@
   - [파이프 옮기기1](https://www.acmicpc.net/problem/17070)
   - [⚾](https://www.acmicpc.net/problem/17281)
   - [+α: 괄호 추가하기](https://www.acmicpc.net/problem/16637)
+- 결과
+  - 야구 문제와 괄호 추가하기는 나중에 봅시다.
+
+### [22.03.15]
+
+- 브루트 포스, 최단경로 알고리즘
+  - [N-Queen](https://www.acmicpc.net/problem/9663)
+  - [지름길](https://www.acmicpc.net/problem/1446)
 
 
 ## 4. 기타 확인사항
