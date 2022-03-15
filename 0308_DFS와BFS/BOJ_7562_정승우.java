@@ -28,7 +28,8 @@ public class BOJ_7562_정승우 {
 		
 	}
 	//말의 정보를 담을 q를 생성
-	static Queue<knight> q = new LinkedList<>();
+	//static Queue<knight> q = new LinkedList<>();
+	static Queue<knight> q;
 	
 	//시계방향으로
 	static int dr[] = {-2, -1, 1, 2, 2, 1, -1, -2};  
@@ -59,12 +60,13 @@ public class BOJ_7562_정승우 {
 			//체스판 배열 생성
 			arr = new int[I][I];
 			
+			q = new LinkedList<>();
 			//큐에 knight 생성자 추가(위치값,카운트값을 저장)
 			q.offer(new knight(r1, c1, 0));
 
 			bfs();
 			System.out.println(number);
-	
+			
 		}
 		
 	}
@@ -94,7 +96,5 @@ public class BOJ_7562_정승우 {
 			}
 		}
 	}
-	
-
 }
 
