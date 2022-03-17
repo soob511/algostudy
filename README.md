@@ -51,6 +51,7 @@
   * [[22.03.10]](#anchor-220310)
   * [[22.03.15]](#anchor-220315)
   * [[22.03.17]](#anchor-220317)
+  * [[22.03.22]](#anchor-220322)
 
   </div>
   </details>
@@ -154,6 +155,14 @@
 - 브루트 포스, 최단경로 알고리즘
   - [N-Queen](https://www.acmicpc.net/problem/9663)
   - [지름길](https://www.acmicpc.net/problem/1446)
+
+
+### [22.03.22]
+
+- 그리디, 최단경로 알고리즘
+  - [잃어버린 괄호](https://www.acmicpc.net/problem/1541)
+  - [운동](https://www.acmicpc.net/problem/1956)
+
 
 
 ## 4. 기타 확인사항
