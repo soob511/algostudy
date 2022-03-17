@@ -17,13 +17,13 @@ public class BOJ_9663_정승우 {
 		System.out.println(cnt);
 	}
 	
-	//rowNu : 퀸을 두어야하는 현재 행
+	//rowNum : 퀸을 두어야하는 현재 행
 	public static void setQueen(int roNum) {
 		
 		//직전까지의 상황이 유망하지 않다면 리턴
 		if(!isAvailable(roNum-1)) return; 
 
-		// 기본파트 : 퀸을 모두 놓았다면
+		//퀸을 모두 놓았다면
 		if(roNum>N) {
 			cnt++;
 			return;
@@ -35,11 +35,12 @@ public class BOJ_9663_정승우 {
 			setQueen(roNum+1);
 		}
 	}
-	// rowNo : 놓아진 마지막 퀸
-	public static boolean isAvailable(int rowNo) { 
+	// rowNum : 놓아진 마지막 퀸
+	public static boolean isAvailable(int rowNum) { 
 		
-		for (int i=1; i<rowNo; i++) {
-			if(col[rowNo]== col[i] || rowNo -i == Math.abs(col[rowNo]-col[i])) return false;
+		//반복문 
+		for (int i=1; i<rowNum; i++) {
+			if(col[rowNum]== col[i] || rowNum -i == Math.abs(col[rowNum]-col[i])) return false;
 		}
 		return true;
 	}
