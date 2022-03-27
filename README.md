@@ -52,6 +52,8 @@
   * [[22.03.15]](#anchor-220315)
   * [[22.03.17]](#anchor-220317)
   * [[22.03.22]](#anchor-220322)
+  * [[22.03.24]](#anchor-220324)
+  * [[22.03.29]](#anchor-220329)
 
   </div>
   </details>
@@ -163,6 +165,20 @@
   - [잃어버린 괄호](https://www.acmicpc.net/problem/1541)
   - [운동](https://www.acmicpc.net/problem/1956)
 
+### [22.03.24]
+
+- 진행자의 건강문제로 패스.
+
+
+### [22.03.29]
+
+- DFS, 최단경로 알고리즘
+  - [안전 영역](https://www.acmicpc.net/problem/2468)
+  - [특정한 최단 경로](https://www.acmicpc.net/problem/1504)
+
+- 추가?
+  - [탈출](https://www.acmicpc.net/problem/3055)
+  - [특정한 최단 경로](https://www.acmicpc.net/problem/1504)
 
 
 ## 4. 기타 확인사항
