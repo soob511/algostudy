@@ -178,7 +178,7 @@
 
 - 추가?
   - [탈출](https://www.acmicpc.net/problem/3055)
-  - [특정한 최단 경로](https://www.acmicpc.net/problem/1504)
+  - [게임](https://www.acmicpc.net/problem/1103)
 
 
 ## 4. 기타 확인사항
