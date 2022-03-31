@@ -169,8 +169,10 @@
 
 - 진행자의 건강문제로 패스.
 
-
 ### [22.03.29]
+
+- 스터디원들의 건강문제로 패스.
+### [22.03.31]
 
 - DFS, 최단경로 알고리즘
   - [안전 영역](https://www.acmicpc.net/problem/2468)
@@ -179,6 +181,13 @@
 - 추가?
   - [탈출](https://www.acmicpc.net/problem/3055)
   - [게임](https://www.acmicpc.net/problem/1103)
+
+
+### [22.04.05]
+-DP
+  - [계단오르기](https://www.acmicpc.net/problem/2579)
+  - [정수삼각형](https://www.acmicpc.net/problem/1932)
+
 
 
 ## 4. 기타 확인사항
