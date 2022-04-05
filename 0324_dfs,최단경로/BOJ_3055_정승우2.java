@@ -17,13 +17,13 @@ public class BOJ_3055_정승우2 {
 		int c;
 		int cnt;
 		
-		//고슴도치
+		
 		pos(int r, int c) {
 			this.r = r;
 			this.c = c;
 		}
 		
-		//홍수
+	
 		pos(int r, int c, int cnt) {
 			this.r = r;
 			this.c = c;
