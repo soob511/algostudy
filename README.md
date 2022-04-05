@@ -56,6 +56,7 @@
   * [[22.03.29]](#anchor-220329)
   * [[22.03.31]](#anchor-220331)
   * [[22.04.05]](#anchor-220405)
+  * [[22.04.07]](#anchor-220407)
 
   </div>
   </details>
@@ -190,6 +191,11 @@
   - [계단오르기](https://www.acmicpc.net/problem/2579)
   - [정수삼각형](https://www.acmicpc.net/problem/1932)
 
+### [22.04.07]
+- DP
+  - [이친수](https://www.acmicpc.net/problem/2193)
+- 플로이드-와샬
+  - [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389)
 
 
 ## 4. 기타 확인사항
