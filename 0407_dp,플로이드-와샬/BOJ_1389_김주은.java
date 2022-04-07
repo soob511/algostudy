@@ -23,6 +23,7 @@ public class Main_BJ_1389_케빈베이컨의6단계법칙_김주은 {
 			}
 		}
 		
+		//간선 입력
 		for(int i=0;i<M;i++) {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
@@ -31,6 +32,7 @@ public class Main_BJ_1389_케빈베이컨의6단계법칙_김주은 {
 			map[a-1][b-1]=map[b-1][a-1]=1;
 		}
 		
+		//플로이드 와샬
 		for(int k=0;k<N;k++) {
 			for(int i=0;i<N;i++) {
 				for(int j=0;j<N;j++) {
