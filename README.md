@@ -57,6 +57,8 @@
   * [[22.03.31]](#anchor-220331)
   * [[22.04.05]](#anchor-220405)
   * [[22.04.07]](#anchor-220407)
+  * [[22.04.11]](#anchor-220411)
+  * [[22.04.14]](#anchor-220414)
 
   </div>
   </details>
@@ -196,6 +198,21 @@
   - [이친수](https://www.acmicpc.net/problem/2193)
 - 플로이드-와샬
   - [케빈 베이컨의 6단계 법칙](https://www.acmicpc.net/problem/1389)
+
+### [22.04.11]
+- 비트마스킹
+  - [물병](https://www.acmicpc.net/problem/1052)
+- etc
+  - [연구소](https://www.acmicpc.net/problem/14502)
+  - [동전](https://www.acmicpc.net/problem/2293)
+
+### [22.04.14]
+
+- 비트마스킹
+  - [시간표 짜기](https://www.acmicpc.net/problem/14569)
+
+- DP
+  - [카드 구매하기](https://www.acmicpc.net/problem/11052)
 
 
 ## 4. 기타 확인사항
