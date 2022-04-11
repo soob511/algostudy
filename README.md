@@ -207,10 +207,8 @@
   - [동전](https://www.acmicpc.net/problem/2293)
 
 ### [22.04.14]
-
 - 비트마스킹
   - [시간표 짜기](https://www.acmicpc.net/problem/14569)
-
 - DP
   - [카드 구매하기](https://www.acmicpc.net/problem/11052)
 
