@@ -19,7 +19,7 @@ public class Main_BJ_14569_시간표짜기_김주은 {
 			for(int j=0;j<n;j++) {
 				int val = Integer.parseInt(st.nextToken());
 				//class[i]에 수업 시간표 저장
-				classes[i] |= (1<<(val-1));
+				classes[i] |= (1L<<(val-1));
 			}
 		}
 		
@@ -31,7 +31,7 @@ public class Main_BJ_14569_시간표짜기_김주은 {
 			for(int j=0;j<m;j++) {
 				int val = Integer.parseInt(st.nextToken());
 				//student[i]에 학생이 가능한 시간표 저장
-				student[i] |= (1<<(val-1));
+				student[i] |= (1L<<(val-1));
 			}
 		}
 		
