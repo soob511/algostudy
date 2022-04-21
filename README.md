@@ -59,6 +59,7 @@
   * [[22.04.07]](#anchor-220407)
   * [[22.04.11]](#anchor-220411)
   * [[22.04.14]](#anchor-220414)
+  * [[22.04.25]](#anchor-220425)
 
   </div>
   </details>
@@ -212,6 +213,12 @@
 - DP
   - [카드 구매하기](https://www.acmicpc.net/problem/11052)
 
+
+### [22.04.25]
+
+  - [미세먼지 안녕!](https://www.acmicpc.net/problem/17144)
+  - [로봇 조종하기](https://www.acmicpc.net/problem/2169)
+  - [섬의 개수](https://www.acmicpc.net/problem/4963)
 
 ## 4. 기타 확인사항
 
