@@ -223,7 +223,7 @@
 
 ### [22.04.28]
 
-  - [인구이동](https://www.acmicpc.net/problem/26234)
+  - [인구이동](https://www.acmicpc.net/problem/16234)
   - [포도주시식](https://www.acmicpc.net/problem/2156)
   
 ## 4. 기타 확인사항
