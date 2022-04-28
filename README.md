@@ -60,6 +60,7 @@
   * [[22.04.11]](#anchor-220411)
   * [[22.04.14]](#anchor-220414)
   * [[22.04.25]](#anchor-220425)
+  * [[22.04.28]](#anchor-220428)
 
   </div>
   </details>
@@ -220,6 +221,11 @@
   - [로봇 조종하기](https://www.acmicpc.net/problem/2169)
   - [섬의 개수](https://www.acmicpc.net/problem/4963)
 
+### [22.04.28]
+
+  - [인구이동](https://www.acmicpc.net/problem/16234)
+  - [포도주시식](https://www.acmicpc.net/problem/2156)
+  
 ## 4. 기타 확인사항
 
 ### GitLab 업로드 방법
