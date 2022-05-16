@@ -3,7 +3,7 @@ package com.ssafy.add.d0516;
 import java.io.*;
 import java.util.*;
 
-public class Main_BJ_20058_마법사상어와파이어스톰_김주은 {
+public class BOJ_20058_김주은 {
 	
 	static int M;
 
@@ -64,7 +64,6 @@ public class Main_BJ_20058_마법사상어와파이어스톰_김주은 {
 //				}
 				
 			}
-			System.out.println();
 		}
 		
 		for(int i=0;i<M;i++) {
