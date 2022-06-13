@@ -1,3 +1,5 @@
+https://github.com/jojoldu/junior-recruit-scheduler
+
 # [2022.02] SSAFY_STEPY_STUDY
 
 ## IM 검정 대비 필수 20문제
