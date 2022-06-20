@@ -19,6 +19,8 @@ https://github.com/WooVictory/Ready-For-Tech-Interview
 부족한 분야: 이분탐색, 분할정복, 그리디 알고리즘
 
 풀어올 문제: 
+
     - https://programmers.co.kr/learn/courses/30/lessons/42861
+    
     - 푸는데 걸린 시간 측정하기(해답을 검색해보았다면 그때까지 걸린 시간)
 
