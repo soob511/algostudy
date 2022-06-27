@@ -58,7 +58,9 @@
     - 시스템의 일치가 필요하지 않다. -> 작업 행위간 처리 시간이 일치하지 않는다.
 
 ## 과제
-    - https://programmers.co.kr/learn/courses/30/lessons/42884
-    - cs 문제 하나씩 골라오기
+
+- https://programmers.co.kr/learn/courses/30/lessons/42884
+
+- cs 문제 하나씩 골라오기
 
 
