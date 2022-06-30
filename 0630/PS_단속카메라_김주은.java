@@ -2,7 +2,7 @@ import java.util.*;
 
 class Solution {
     public int solution(int[][] routes) {
-        int answer = 0;
+        int answer = 1;
         
         Arrays.sort(routes, new Comparator<int[]>(){
             @Override
@@ -18,20 +18,30 @@ class Solution {
         boolean[] visited = new boolean[routes.length];
         
         for(int i=0;i<routes.length;i++){
+            
+            if (visited[i]) continue;
+            
             int left = routes[i][0];
             int right = routes[i][1];
             int j=i+1;
+            visited[i] = true;
+            
             while(j<routes.length){
-                if(routes[j][0]<=routes[i][1]){
+                // 공통범위와 겹칠 때
+                if(routes[j][0]<=right){
                     left=routes[j][0];
-                    if(routes[j][1]<=routes[i][1]){
+                    if(routes[j][1]<=right){
                         right=routes[j][1];
                     }
+                    visited[j] = true;
+                    j++;
+                }
+                else{
+                    answer++;
+                    break;
                 }
             }
-            //...
         }
-        
         
         return answer;
     }
