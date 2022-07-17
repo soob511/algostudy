@@ -1,5 +1,3 @@
-package com.ssafy.day0516;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,8 +13,10 @@ public class BOJ_20058_정승우 {
 	static int len;
 	static int sum;
 	static int count;
+	static int max_count;
 	static int[][] map,temp,copy;
 	static boolean[][] visited;
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -63,41 +63,42 @@ public class BOJ_20058_정승우 {
 			for (int i =0; i<size; i++) {
 				for(int j=0; j<size; j++) {
 					//i,j에 대하여 인접 얼음이 3개보다 적은지 체크
-					fourSearch(i,j);
-					
+					fourSearch(i,j);	
 				}
 			}
 	
-			
-			//남아있는 얼음의 합
-			sum = 0;
-			//남아있는 얼음 구하기
-			haveIce();
-			
-			
-			//DFS에서 중복체크를 위한 배열
-			visited = new boolean[size][size];
-			//
-			count=0;
-			for(int i=0; i<size; i++) {
-				for(int j=0; j<size; j++) {
-					if(map[i][j]==0) continue;
-					DFS(i,j);
-				}
-			}
-			//남아있는 얼음의합
-			System.out.println(sum);
-			//얼음덩어리
-			System.out.println(count);
 		}
 
+		//남아있는 얼음의 합
+		sum = 0;
+		//남아있는 얼음 구하기
+		haveIce();
+		
+		
+		//DFS에서 중복체크를 위한 배열
+		visited = new boolean[size][size];
+		//
+		max_count=0;
+		for(int i=0; i<size; i++) {
+			for(int j=0; j<size; j++) {
+				if(map[i][j]==0) continue;
+				if(visited[i][j]) continue;
+				count = 0;
+				DFS(i,j);
+				max_count = Math.max(count, max_count);
+			}
+		}
+		//남아있는 얼음의합
+		System.out.println(sum);
+		//얼음덩어리
+		System.out.println(max_count);
 	}
 
 
 	//동시에 녹아야하기 위해 만든 배열
 	static void mapcopy() {
-		for (int i =0; i<size; i+=len) {
-			for(int j=0; j<size; j+=len) {			
+		for (int i =0; i<size; i++) {
+			for(int j=0; j<size; j++) {			
 				
 				copy[i][j] = map[i][j];
 				
@@ -132,7 +133,7 @@ public class BOJ_20058_정승우 {
 		for(int i=0; i<4; i++) {
 			int nr = r+dr[i];
 			int nc = c+dc[i];
-			if(nr>=0&&nr<size&&nc>=0&&nc<size&&temp[nr][nc]!=0) {
+			if(nr>=0&&nr<size&&nc>=0&&nc<size&&copy[nr][nc]!=0) {
 				cnt++;
 			}
 		}
@@ -140,7 +141,7 @@ public class BOJ_20058_정승우 {
 			if(map[r][c]==0) {
 				map[r][c] =0;
 			} else {
-				map[r][c] = temp[r][c]-1;
+				map[r][c] = copy[r][c]-1;
 			}
 		}
 	}
@@ -157,22 +158,18 @@ public class BOJ_20058_정승우 {
 	
 	//가장 큰 얼음 덩어리 구하기
 	static void DFS(int r, int c) {
+		visited[r][c] =true;
+		//조건문 통과시 인접한 얼음이 있음으로 카운트 증가
+		count++;		
 		
 		for(int i=0; i<4; i++) {
 			int nr = r+dr[i];
 			int nc = c+dc[i];
 			if(nr>=0&&nr<size&&nc>=0&&nc<size&&visited[nr][nc]==false) {
 				
-				visited[r][c] =true;
-				//조건문 통과시 인접한 얼음이 있음으로 카운트 증가
-				count++;
-				
 				DFS(nr, nc);
 			}
-			
-			return;
 		}
-		
 	}
 	
 }
