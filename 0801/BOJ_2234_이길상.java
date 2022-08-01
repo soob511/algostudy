@@ -4,17 +4,20 @@ import java.util.*;
 public class Main {
     static int N, M;
     static int[][] visited, info;
+    static Map<Integer,Integer> room_space = new HashMap<>();
+
+    static int[] dx = {0, -1, 0, 1};
+    static int[] dy = {-1, 0, 1, 0};
 
     static int room_no = 0;
     static int room_max = 0;
     static int room_max2 = 0;
 
-    static int bfs(int n, int m){
+    static void bfs(int n, int m){
         room_no++; // 방 개수 증가
         
         int count = 0; // 방 넓이 카운트
-
-        int room_near = 0; // 인접한 방의 최대 넓이
+        boolean[] room_near = new boolean[room_no];// 인접한 다른 방 체크
 
         // bfs 큐
         Queue<int[]> queue = new LinkedList<>();
@@ -28,49 +31,37 @@ public class Main {
 
             count++;
 
-            int wall = info[x][y];
-            if ((wall&1) == 0){
-                // 벽이 없고 미방문한 곳일 때
-                if (visited[x][y-1]==0) {
-                    queue.add(new int[]{x, y-1});
-                    visited[x][y=1] = room_no;
-                }
-            } 
-            // 벽 너머가 미방문한 다른 방인경우
-            else if (y-1>=0 && visited[x][y-1]==0 && visited[x][y-1]!=room_no)
-                room_near = Math.max(room_near, bfs(x, y-1));
+            for (int i = 0; i < 4; i++) {
+                int bit = 1<<i;
+                int nx = x+dx[i];
+                int ny = y+dy[i];
 
-            if ((wall&2) == 0){
-                if (visited[x-1][y]==0) {
-                    queue.add(new int[]{x-1, y});
-                    visited[x-1][y] = room_no;
-                }
-            }
-            else if (x-1>=0 && visited[x-1][y]==0 && visited[x-1][y]!=room_no)
-                room_near = Math.max(room_near, bfs(x-1, y));
+                if(nx<0 || ny<0 || nx>=N || ny>=M) continue;
 
-            if ((wall&4) == 0){
-                if(visited[x][y+1]==0) {
-                    queue.add(new int[]{x, y+1});
-                    visited[x][y+1] = room_no;
-                }
+                if ((info[x][y]&bit) == 0){
+                    // 벽이 없고 미방문한 곳일 때
+                    if (visited[nx][ny]==0) {
+                        queue.add(new int[]{nx, ny});
+                        visited[nx][ny] = room_no;
+                    }
+                } 
+                // 벽 너머가 방문한 다른 방인경우
+                else if (visited[nx][ny]>0 && visited[nx][ny]!=room_no)
+                    room_near[visited[nx][ny]] = true;
             }
-            else if (y+1<M && visited[x][y+1]==0 && visited[x][y+1]!=room_no)
-                room_near = Math.max(room_near, bfs(x, y+1));
-            
-            if ((wall&8) == 0){
-                if(visited[x+1][y]==0) {
-                    queue.add(new int[]{x+1, y});
-                    visited[x+1][y] = room_no;
-                }
-            }
-            else if (x+1<N && visited[x+1][y]==0 && visited[x+1][y]!=room_no)
-                room_near = Math.max(room_near, bfs(x+1, y));
         }
 
-        room_max = Math.max(room_max, count); // 가장 넓은 방의 넓이 갱신
-        room_max2 = Math.max(room_max2, count + room_near);
-        return count;
+        // 가장 넓은 방의 넓이 갱신
+        room_max = Math.max(room_max, count);
+
+        // 가장 넓은 넓이 합 갱신
+        for (int i = 1; i < room_no; i++) {
+            if(room_near[i]){
+                room_max2 = Math.max(room_max2, count + room_space.get(i));
+            }
+        }
+        
+        room_space.put(room_no, count);
     }
 
     
@@ -93,7 +84,12 @@ public class Main {
             }
         }
 
-        bfs(0, 0);
+        for (int n = 0; n < N; n++) {
+            for (int m = 0; m < M; m++) {
+                if(visited[n][m]==0)
+                    bfs(n, m);
+            }
+        }
 
         System.out.println(room_no);
         System.out.println(room_max);
