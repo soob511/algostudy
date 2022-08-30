@@ -25,7 +25,7 @@ public class Main_9465_스티커 {
 
             for(int[] b:map) System.out.println(Arrays.toString(b));System.out.println();
             dp[0][1] = map[0][1];
-            dp[0][2] = map[0][2];
+            dp[1][1] = map[1][1];
 
             for(int j=2;j<=n;j++){
                 dp[0][j] = Math.max(dp[1][j-1],dp[1][j-2])+map[0][j];
