@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class Main_BJ_13405_퇴사_김주은 {
+public class Main_BJ_14501_퇴사_김주은 {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
