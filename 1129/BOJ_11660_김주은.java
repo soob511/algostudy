@@ -47,12 +47,7 @@ public class Main_BJ_11660_구간합구하기5_김주은 {
 		for(int i=1;i<=N;i++) {
 			st = new StringTokenizer(br.readLine());
 			for(int j=1;j<=N;j++) {
-				int val = Integer.parseInt(st.nextToken());
-				if(j==1) {
-					arr[j]=val;
-				} else {
-					arr[j]=arr[j-1]+val;
-				}
+				arr[j]=arr[j-1]+Integer.parseInt(st.nextToken());
 				dp[i][j]=dp[i-1][j]+arr[j];
 			}
 		}
