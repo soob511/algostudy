@@ -1,5 +1,3 @@
-package com.bj;
-
 import java.io.*;
 import java.util.*;
 
@@ -17,9 +15,9 @@ public class Main_BJ_2529_부등호_김주은 {
 		StringTokenizer st;
 		
 		N = Integer.parseInt(br.readLine());
-		num = new int[N+1];
+		
 		size = new char[N];
-		visited = new boolean[N+1];
+		
 		
 		max = new int[N+1];
 		min = new int[N+1];
@@ -35,10 +33,11 @@ public class Main_BJ_2529_부등호_김주은 {
 		}
 		
 		for(int i=0;i<10;i++) {
+			num = new int[N+1];
+			visited = new boolean[10];
 			num[0]=i;
 			visited[i]=true;
 			dfs(0);
-			visited[i]=false;
 		}
 		
 		for(int i=0;i<N+1;i++) {
@@ -60,6 +59,11 @@ public class Main_BJ_2529_부등호_김주은 {
 		}
 		
 		for(int i=0;i<10;i++) {
+			
+			if(visited[i]) {
+				continue;
+			}
+			
 			if(size[cnt] == '<' && num[cnt]<i) {
 				num[cnt+1] = i;
 				visited[i] = true;
@@ -79,6 +83,10 @@ public class Main_BJ_2529_부등호_김주은 {
 		for(int i=0;i<N+1;i++) {
 			if(min[i]>num[i]) {
 				copy(min,num);
+				break;
+			} else if(min[i]==num[i]) {
+				continue;
+			} else {
 				break;
 			}
 		}
