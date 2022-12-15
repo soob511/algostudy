@@ -35,7 +35,7 @@ public class Main_BJ_9184_신나는함수실행_김주은 {
 			return w(20, 20, 20);
 		} 
 		
-		if(dp[a][b][c]<=0) {
+		if(dp[a][b][c]==0) {
 			if (a < b && b < c) {
 				return dp[a][b][c] = w(a, b, c - 1) + w(a, b - 1, c - 1) - w(a, b - 1, c);
 			} else {
