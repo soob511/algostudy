@@ -23,11 +23,34 @@ public class Main_BJ_1911_흙길보수하기_김주은 {
 		
 		Arrays.sort(damp, (a,b)->{return a[0]-b[0];});
 		
-		while(N-->0) {
-			
+		int cnt=0;
+		
+		if(damp[N-1][1]-damp[0][0]+1<L) {
+			cnt=1;
+		} else {
+			int nulpanzi=-1;
+			for(int i=0;i<N;i++) {
+				int start = damp[i][0]+1;
+				int end = damp[i][1];
+				int idx=start;
+				
+				if(i>=1 && nulpanzi>=end) {
+					continue;
+				} else if(i>=1 && nulpanzi>=start && nulpanzi<end) {
+					idx = nulpanzi+1;
+				} 
+				
+				while(idx+L-1<end) {
+					idx += L;
+					++cnt;
+				}
+				++cnt;
+				nulpanzi = idx+L-1;
+			}
 		}
 		
-		System.out.println(L);
+		System.out.println(cnt);
+		
 	}
 
 }
