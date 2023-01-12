@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main_BJ_1906_지뢰찾기_김주은 {
+public class Main_BJ_1996_지뢰찾기_김주은 {
 	
 	static int[] dr = {-1,-1,0,1,1,1,0,-1};
 	static int[] dc = {0,1,1,1,0,-1,-1,-1};
