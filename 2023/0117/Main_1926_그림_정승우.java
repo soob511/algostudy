@@ -13,7 +13,7 @@ public class Main_1926_그림_정승우 {
     static int[] dc = {1,0,-1,0};
     static int cnt;
 
-    static int res = Integer.MIN_VALUE;
+    static int res = 0;
 
     static Queue<Pos> queue = new LinkedList<>();
     public static void main(String[] args) throws IOException {
@@ -49,6 +49,7 @@ public class Main_1926_그림_정승우 {
         }
         System.out.println(count);
         System.out.println(res);
+
     }
 
     private static void bfs() {
@@ -60,9 +61,9 @@ public class Main_1926_그림_정승우 {
             for(int d=0; d<4; d++) {
                 int nr = r + dr[d];
                 int nc = c + dc[d];
-                if(nr>=0&&nc>=0&&nr<n&&nc<m&&!check[nr][nc]) {
-
+                if(nr>=0&&nc>=0&&nr<n&&nc<m&&!check[nr][nc]&&map[nr][nc]==1) {
                     check[nr][nc] = true;
+                    queue.add(new Pos(nr,nc));
                     cnt++;
                     bfs();
                 }
