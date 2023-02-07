@@ -1,9 +1,7 @@
 package greedy;
 
-public class Solution_큰수만들기 {
-    public static void main(String[] args) {
-        String number = "1231234";
-        int k = 3;
+class Solution {
+    public String solution(String number, int k) {
         StringBuilder sb = new StringBuilder();
         int start = 0;
         int max = 0;
@@ -17,6 +15,6 @@ public class Solution_큰수만들기 {
             }
             sb.append(max);
         }
-        System.out.println(sb);
+        return sb.toString();
     }
 }
