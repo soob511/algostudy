@@ -1,17 +1,15 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main_1931_회의실배정_정승우 {
 
-    static class time {
+    static class Time {
         int a;
         int b;
 
-        time(int a, int b) {
+        Time(int a, int b) {
             this.a = a;
             this.b = b;
         }
@@ -23,21 +21,35 @@ public class Main_1931_회의실배정_정승우 {
                     ", b=" + b +
                     '}';
         }
+
+
     }
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         StringTokenizer st;
-        ArrayList<time> list = new ArrayList<>();
-        int result = 0;
+        ArrayList<Time> list = new ArrayList<>();
+        int result = 1;
 
         for(int i=0; i<n; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
-            list.add(new time(a,b));
+            list.add(new Time(a,b));
         }
+        Collections.sort(list, new Comparator<Time>() {
+            @Override
+            public int compare(Time o1, Time o2) {
+                if(o1.b==o2.b) {
+                    return o1.a < o2.a ? -1 : o1.a > o2.a ? 1 : 0;
+                } else if(o1.b < o2.b) {
+                    return -1;
+                } else {
+                    return 1;
+                }
+            }
+        });
 
         int a_cnt = 1;
         int b_cnt = 0;
