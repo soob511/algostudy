@@ -1,7 +1,5 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/12927
 
-import heapq
-
 def solution(n, works):
     if sum(works) < n:
         return 0
