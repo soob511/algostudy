@@ -83,6 +83,7 @@ public class Main_색깔폭탄 {
                     for (int j = 0; j < list[i].size(); j++) {
                         if (list[i].get(j)[2] == 0) {//빨간폭탄수
                             count++;
+                            continue;
                         }
                         if (list[i].get(j)[0] > r) {//가장큰행
                             r = list[i].get(j)[0];
