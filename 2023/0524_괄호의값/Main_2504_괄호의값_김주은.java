@@ -1,7 +1,4 @@
-package com.bj;
-
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class Main_BJ_2504_괄호의값_김주은 {
 	
