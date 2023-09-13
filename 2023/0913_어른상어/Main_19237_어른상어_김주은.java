@@ -1,5 +1,3 @@
-package com.bj;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -99,6 +97,14 @@ public class Main_BJ_19237_어른상어_김주은 {
 					map2[i][j]=-1;
 				}
 			}
+			Smell[][] smell2 = new Smell[N][N];
+			for(int i=0;i<N;i++) {
+				for(int j=0;j<N;j++) {
+					if(smell[i][j]!=null) {
+						smell2[i][j]=new Smell(smell[i][j].num,smell[i][j].time);
+					}
+				}
+			}
 			A : for(int i=0;i<M;i++) {
 				if(shark[i]!=null) {
 					
@@ -121,22 +127,27 @@ public class Main_BJ_19237_어른상어_김주은 {
 							continue;
 						}
 						
-						if(smell[nsx][nsy]!=null) {
-							//상어 냄새만 있다
-							if(map2[nsx][nsy]==-1) {
-								if(smell[nsx][nsy].num==i) {
-									if(px==-1 && py==-1 && pdir==-1) {
-										px = nsx;
-										py = nsy;
-										pdir = dirs[i][sdir][d];
-									}
+						if(smell2[nsx][nsy]!=null) {
+							//내가 지나온 길
+							if(smell2[nsx][nsy].num==i) {
+								if(px==-1 && py==-1 && pdir==-1) {
+									px = nsx;
+									py = nsy;
+									pdir = dirs[i][sdir][d];
 								}
 								continue;
 							} 
-							//상어가 실제로 있다
+							//다른 상어 냄새 길
 							else {
-								shark[i]=null;
-								continue A;
+								//이전에는 상어가 없었으나 앞번호 상어가 이동하여 자리 잡은 경우
+								if(smell[nsx][nsy]==null) {
+									shark[i]=null;
+									continue A;
+								} 
+								//이전에도 상어가 있었다
+								else {
+									continue;
+								}
 							}
 						}
 						
@@ -155,7 +166,7 @@ public class Main_BJ_19237_어른상어_김주은 {
 					
 					//새로운 상어 이동 적용
 					map2[nextx][nexty]=i;
-					smell[nextx][nexty]=new Smell(i,k+1);
+					smell2[nextx][nexty]=new Smell(i,k+1);
 					shark[i].x = nextx;
 					shark[i].y = nexty;
 					shark[i].dir = nextdir;
@@ -164,6 +175,7 @@ public class Main_BJ_19237_어른상어_김주은 {
 			}
 			
 			map=map2;
+			smell=smell2;
 			
 			//2. 상어 냄새 -1
 			for(int i=0;i<N;i++) {
@@ -177,24 +189,24 @@ public class Main_BJ_19237_어른상어_김주은 {
 				}
 			}
 			
-			System.out.println("=========="+time+"==========");
-			for(int i=0;i<N;i++) {
-				for(int j=0;j<N;j++) {
-					if(smell[i][j]==null) {
-						System.out.print("[0,0]");
-					}else {
-						System.out.print("["+smell[i][j].num+","+smell[i][j].time+"]");
-					}
-				}
-				System.out.println();
-			}
-			System.out.println("------");
-			for(int i=0;i<N;i++) {
-				for(int j=0;j<N;j++) {
-					System.out.printf("[%2d]",map[i][j]);
-				}
-				System.out.println();
-			}
+//			System.out.println("=========="+time+"==========");
+//			for(int i=0;i<N;i++) {
+//				for(int j=0;j<N;j++) {
+//					if(smell[i][j]==null) {
+//						System.out.print("[0,0]");
+//					}else {
+//						System.out.print("["+smell[i][j].num+","+smell[i][j].time+"]");
+//					}
+//				}
+//				System.out.println();
+//			}
+//			System.out.println("------");
+//			for(int i=0;i<N;i++) {
+//				for(int j=0;j<N;j++) {
+//					System.out.printf("[%2d]",map[i][j]);
+//				}
+//				System.out.println();
+//			}
 		
 			
 		}
