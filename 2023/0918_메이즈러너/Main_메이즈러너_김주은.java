@@ -21,7 +21,6 @@ public class Main_2023_1_2_메이즈러너_김주은 {
 		M = Integer.parseInt(st.nextToken());
 		K = Integer.parseInt(st.nextToken());
 		
-		
 		map = new int[N][N];
 		p = new int[M][2];
 		exit = new boolean[M];
@@ -38,26 +37,18 @@ public class Main_2023_1_2_메이즈러너_김주은 {
 			p[i][0]=Integer.parseInt(st.nextToken())-1;
 			p[i][1]=Integer.parseInt(st.nextToken())-1;
 		}
-		Arrays.sort(p,(o1,o2)->{
-			if(o1[0]==o2[0]) {
-				return o1[1]-o2[1];
-			}
-			return o1[0]-o2[0];
-		});
 		
 		st = new StringTokenizer(br.readLine());
 		ex=Integer.parseInt(st.nextToken())-1;
 		ey=Integer.parseInt(st.nextToken())-1;
 		
 		X : for(int k=0;k<K;k++) {
-			
 			if(exit_cnt==M) {
 				break;
 			}
 			
 			//1. 출구쪽으로 이동
 			for(int m=0;m<M;m++) {
-				
 				if(exit[m]) {
 					continue;
 				}
@@ -71,8 +62,6 @@ public class Main_2023_1_2_메이즈러너_김주은 {
 				int dx = ex-px==0?0:(ex-px)/Math.abs(ex-px);
 				int dy = ey-py==0?0:(ey-py)/Math.abs(ey-py);
 
-				
-				//1. 사람 이동
 				for(int d=0;d<2;d++) {
 					npx=px;
 					npy=py;
@@ -100,7 +89,6 @@ public class Main_2023_1_2_메이즈러너_김주은 {
 						break;
 					}
 				}
-				
 			}
 			
 			//2. 출구와 참가자 포함한 최소 정사각형 찾기
@@ -149,21 +137,16 @@ public class Main_2023_1_2_메이즈러너_김주은 {
 			int ety = ey-my;
 			ex = mx+ety;
 			ey = my+len-1-etx;
-			
 			//지도 회전
 			for(int x=mx,ay=my;x<mx+len;x++,ay++) {
 				for(int y=my,ax=mx+len-1;y<my+len;y++,ax--) {
 					map2[x][y]=map[ax][ay]==0?0:map[ax][ay]-1;
 				}
 			}
-			
 			map=map2;
-			
 		}
-
+		
 		System.out.println(move);
 		System.out.println((ex+1)+" "+(ey+1));
-
 	}
-
 }
